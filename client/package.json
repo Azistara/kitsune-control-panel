@@ -1,6 +1,6 @@
 {
-  "name": "kitsune-dash",
-  "version": "0.1.0",
+  "name": "kitsune-dash-client",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -11,10 +11,12 @@
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
+    "react-native-web": "^0.19.9",
     "react-router": "^6.18.0",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
     "recharts": "^2.9.3",
+    "systeminformation": "^5.21.17",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,5 +42,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Kitsune Control Panel Frontend User Interface",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "kitsune-control-panel"
+  },
+  "keywords": [
+    "utility",
+    "dashboard"
+  ],
+  "author": "Azistara",
+  "license": "GPL-3.0-or-later"
 }
