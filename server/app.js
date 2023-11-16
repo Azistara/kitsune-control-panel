@@ -6,10 +6,10 @@
 */
 
 const express = require("express");
-const axios = require("axios"); //Axios default
+// const axios = require("axios"); //Axios default
 const si = require("systeminformation"); //Systeminformation
 const app = express();
-const app2 = axios();
+// const app2 = axios();
 
 
 
@@ -31,7 +31,7 @@ app.get("/", (req, res) => { //Doesn't work?
   });
 });
 
-app2.get("/cpu-info")
+/* app2.get("/cpu-info")
   .then(function (response) {
     console.log("[OK] GET header sent using Axios.");
     si.cpu(function (data) {
@@ -49,7 +49,7 @@ app2.get("/cpu-info")
   })
   .finally(function () {
     // always executed
-});
+}); */
 
 const PORT = process.env.PORT || 8080;
 
