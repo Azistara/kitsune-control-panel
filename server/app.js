@@ -11,6 +11,7 @@ const si = require("systeminformation"); //Systeminformation
 const app = express();
 // const app2 = axios();
 
+const PORT = process.env.PORT || 8080;
 
 
 app.post("/post", (req, res) => {
@@ -50,8 +51,6 @@ app.get("/", (req, res) => { //Doesn't work?
   .finally(function () {
     // always executed
 }); */
-
-const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, console.log(`[OK] Server started on port ${PORT}`));
 
