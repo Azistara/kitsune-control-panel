@@ -15,20 +15,23 @@ const PORT = process.env.PORT || 8080;
 
 
 app.post("/post", (req, res) => {
-  console.log("[OK] Connected to React");
+  console.log("[PST][OK] Connected to React");
   res.redirect("/");
 });
 
-app.get("/", (req, res) => { //Doesn't work?
-  console.log("[OK] Hewwo client");
+app.get("/cpu", (req, res) => {
+  console.log("[CPU][OK] Hewwo client");
   //res.json({ message: "Hello from the Kitsune Control Panel Backend Server (KCPBS)! UwU" });
   si.cpu(function (data){
-    // res.json("---CPU Information---");
-    res.json("Manufacturer: " + data.manufacturer);
-    // res.json("Brand: " + data.brand);
-    // res.json("Clock Speed: " + data.speed);
-    // res.json("No of Logical Cores: " + data.cores);
-    // res.json("No of Physical Cores: " + data.physicalCores);
+    res.json(data);
+  });
+});
+
+app.get("/mem", (req, res) => {
+  console.log("[MEM][OK] Hewwo client");
+  //res.json({ message: "Hello from the Kitsune Control Panel Backend Server (KCPBS)! UwU" });
+  si.mem(function (data){
+    res.json(data);
   });
 });
 
